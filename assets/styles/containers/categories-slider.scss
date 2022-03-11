@@ -1,0 +1,145 @@
+.categories-slider {
+  position: relative;
+
+  &__navigation {
+    &-prev, &-next {
+      width: 36px;
+      height: 36px;
+      top: 8px;
+      margin: 0;
+      background: #fff;
+      border-radius: 50%;
+
+      &:after {
+        display: none;
+      }
+
+      svg {
+        width: 13px;
+        height: auto;
+
+        path {
+          stroke: $dark;
+        }
+      }
+    }
+
+    &-prev {
+      left: -30px;
+      transform: translateX(-100%);
+    }
+
+    &-next {
+      right: -30px;
+      transform: translateX(100%);
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__slide {
+    &.active {
+      .categories-slider__slide {
+        &--category {
+          border-color: $green;
+        }
+      }
+    }
+
+    &--category {
+      height: 50px;
+      display: block;
+    }
+
+    &--item {
+      height: 100px;
+      display: block;
+
+      img {
+        width: 100%;
+        height: 100%;
+        max-width: 95px;
+        max-height: 51px;
+        object-fit: contain;
+      }
+    }
+
+    &--category, &--item {
+      background: #ffffff;
+      border: 3px solid transparent;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (hover: hover) {
+        transition: border-color .2s ease;
+
+        &:hover {
+          border-color: $green;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .categories-slider {
+    &__navigation {
+      &-prev, &-next {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .categories-slider {
+    .swiper-container {
+      overflow: visible;
+    }
+
+    &__slide {
+      width: fit-content !important;
+
+      &--category, &--item {
+        min-width: 120px;
+        padding: 0 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .categories-slider {
+    &__slide {
+      &--category, &--item {
+        min-width: 93px;
+      }
+
+      &--category {
+        font-size: 10px;
+        line-height: 12px;
+        margin-bottom: 15px;
+      }
+
+      &--item {
+        height: 60px;
+        margin-bottom: 15px;
+
+        img {
+          max-width: 55px;
+          max-height: 30px;
+        }
+      }
+    }
+  }
+}

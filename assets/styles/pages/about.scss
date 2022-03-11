@@ -1,0 +1,36 @@
+.about {
+  margin: 20px 0 134px;
+
+  &-image {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__inner {
+    max-width: 849px;
+    width: 100%;
+  }
+  &-title {
+    @include Inter(30px,36px,normal,bold,$dark);
+    margin-bottom: 35px;
+  }
+  &--display {
+    display: block;
+    margin-top: 34px;
+  }
+  &__text {
+    @include Inter(16px,180%,normal,normal,$dark);
+    margin-top: 37px;
+    &--weight {
+      font-weight: bold;
+      display: block;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}

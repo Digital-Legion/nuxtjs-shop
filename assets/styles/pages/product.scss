@@ -1,0 +1,36 @@
+.product-page {
+  &__breadcrumbs {
+    margin: 20px 0;
+  }
+
+  &__product {
+    margin-bottom: 90px;
+  }
+
+  &__parameters {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .product-page {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-page {
+    &__breadcrumbs {
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+
+    &__product {
+      margin-bottom: 30px;
+    }
+
+    &__parameters {
+      margin-top: 30px;
+    }
+  }
+}

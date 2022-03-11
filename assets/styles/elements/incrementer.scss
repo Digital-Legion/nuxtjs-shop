@@ -1,0 +1,87 @@
+.incrementer {
+  display: flex;
+
+  &__cell {
+    border: 3px solid #F4F4F4;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  @mixin dash-after {
+    content: '';
+    background: #BABABA;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__minus, &__plus {
+    &:after {
+      @include dash-after;
+      width: 16px;
+      height: 2px;
+    }
+  }
+
+  &__plus {
+    &:before {
+      @include dash-after;
+      width: 2px;
+      height: 16px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .incrementer {
+    height: 34px;
+
+    &__cell {
+      width: 32px;
+      height: 32px;
+      font-size: 14px;
+      line-height: 17px;
+      border-width: 2px;
+    }
+
+    &__minus, &__plus {
+      &:after {
+        width: 8px;
+      }
+    }
+
+    &__plus {
+      &:before {
+        height: 8px;
+      }
+    }
+  }
+}

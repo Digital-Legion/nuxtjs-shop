@@ -1,0 +1,64 @@
+.header-nav {
+  border-bottom: 1px solid $menu-color;
+  padding: 14px 0 13px;
+  position: relative;
+  z-index: 10002;
+  background: #fff;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 17px;
+  }
+
+  &__nav {
+    width: 100%;
+    @include Inter(14px, 17px, normal, 600,$dark);
+    display: flex;
+    &-item {
+      margin-right: 38px;
+      transition: color .2s ease;
+
+      &.nuxt-link-exact-active {
+        color: $green;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+
+  &__order {
+    span {
+      @include Inter(14px,17px,normal,600,$dark);
+    }
+
+    @media (hover: hover) {
+      span {
+        transition: color .2s ease;
+      }
+
+      &:hover {
+        span {
+          color: $green;
+        }
+      }
+    }
+  }
+  &__inner {
+    max-width: 382px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__phone {
+    span {
+      @include Inter(14px, 17px, normal, 600,$dark);
+    }
+  }
+}

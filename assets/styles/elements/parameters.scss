@@ -1,0 +1,44 @@
+.parameters {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 120%;
+  color: $dark;
+  position: relative;
+
+  &__item {
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  &__key {
+    max-width: 60%;
+    width: 100%;
+    margin-right: 20px;
+    display: inline-flex;
+    height: 14.4px;
+
+    span {
+      display: inline-block;
+      white-space: nowrap;
+      height: 14.4px;
+    }
+
+    &:after {
+      height: 14.4px;
+      content: '';
+      display: inline-block;
+      background-image: linear-gradient(to right, #333 10%, rgba(255, 255, 255, 0) 0%);
+      background-position: left bottom;
+      background-size: 10px 1px;
+      margin-left: 10px;
+      background-repeat: repeat-x;
+      width: 100%;
+      transform: translateY(-3px);
+    }
+  }
+
+  &__value {
+    width: calc(40% - 20px);
+  }
+}

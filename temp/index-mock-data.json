@@ -1,0 +1,269 @@
+{
+  "productInstance": {
+    "like": "/images/card/heart.svg",
+    "image": "/images/card/card1.png",
+    "hit": "Хит продаж",
+    "discount": 5,
+    "discountNumber": 50,
+    "priceNumber": 77,
+    "title": "Адаптер питания\nApple 18W USB-C",
+    "color": "белый",
+    "variant": "Samsung S20",
+    "price": "100"
+  },
+  "heroProductInstance": {
+    "title": "Адаптер питания<br>Apple 18W USB-C",
+    "image": "/temp/adapter.png",
+    "imageMobile": "/temp/adapter--m.png"
+  },
+  "categoriesSlider": [
+    {
+      "slug": "adapters",
+      "title": "Адаптеры",
+      "url": "/",
+      "items": [
+        {
+          "slug": "amazon",
+          "src": "/temp/amazon.png",
+          "url": "/"
+        },
+        {
+          "slug": "apple",
+          "src": "/temp/apple.png",
+          "url": "/"
+        },
+        {
+          "slug": "amazon",
+          "src": "/temp/amazon.png",
+          "url": "/"
+        },
+        {
+          "slug": "apple",
+          "src": "/temp/apple.png",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "slug": "car",
+      "title": "Машина",
+      "url": "/",
+      "items": [
+        {
+          "slug": "amazon",
+          "src": "/temp/amazon.png",
+          "url": "/"
+        },
+        {
+          "slug": "apple",
+          "src": "/temp/apple.png",
+          "url": "/"
+        },
+        {
+          "slug": "amazon",
+          "src": "/temp/amazon.png",
+          "url": "/"
+        },
+        {
+          "slug": "apple",
+          "src": "/temp/apple.png",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "slug": "audio",
+      "title": "Аудио",
+      "url": "/",
+      "items": [
+        {
+          "slug": "amazon",
+          "src": "/temp/amazon.png",
+          "url": "/"
+        },
+        {
+          "slug": "apple",
+          "src": "/temp/apple.png",
+          "url": "/"
+        },
+        {
+          "slug": "amazon",
+          "src": "/temp/amazon.png",
+          "url": "/"
+        },
+        {
+          "slug": "apple",
+          "src": "/temp/apple.png",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "slug": "adapters",
+      "title": "Адаптеры",
+      "url": "/",
+      "items": [
+        {
+          "slug": "amazon",
+          "src": "/temp/amazon.png",
+          "url": "/"
+        },
+        {
+          "slug": "apple",
+          "src": "/temp/apple.png",
+          "url": "/"
+        },
+        {
+          "slug": "amazon",
+          "src": "/temp/amazon.png",
+          "url": "/"
+        },
+        {
+          "slug": "apple",
+          "src": "/temp/apple.png",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "slug": "adapters",
+      "title": "Адаптеры",
+      "url": "/",
+      "items": [
+        {
+          "slug": "amazon",
+          "src": "/temp/amazon.png",
+          "url": "/"
+        },
+        {
+          "slug": "apple",
+          "src": "/temp/apple.png",
+          "url": "/"
+        },
+        {
+          "slug": "amazon",
+          "src": "/temp/amazon.png",
+          "url": "/"
+        },
+        {
+          "slug": "apple",
+          "src": "/temp/apple.png",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "slug": "adapters",
+      "title": "Адаптеры",
+      "url": "/",
+      "items": [
+        {
+          "slug": "amazon",
+          "src": "/temp/amazon.png",
+          "url": "/"
+        },
+        {
+          "slug": "apple",
+          "src": "/temp/apple.png",
+          "url": "/"
+        },
+        {
+          "slug": "amazon",
+          "src": "/temp/amazon.png",
+          "url": "/"
+        },
+        {
+          "slug": "apple",
+          "src": "/temp/apple.png",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "slug": "adapters",
+      "title": "Адаптеры",
+      "url": "/",
+      "items": [
+        {
+          "slug": "amazon",
+          "src": "/temp/amazon.png",
+          "url": "/"
+        },
+        {
+          "slug": "apple",
+          "src": "/temp/apple.png",
+          "url": "/"
+        },
+        {
+          "slug": "amazon",
+          "src": "/temp/amazon.png",
+          "url": "/"
+        },
+        {
+          "slug": "apple",
+          "src": "/temp/apple.png",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "slug": "adapters",
+      "title": "Адаптеры",
+      "url": "/",
+      "items": [
+        {
+          "slug": "amazon",
+          "src": "/temp/amazon.png",
+          "url": "/"
+        },
+        {
+          "slug": "apple",
+          "src": "/temp/apple.png",
+          "url": "/"
+        },
+        {
+          "slug": "amazon",
+          "src": "/temp/amazon.png",
+          "url": "/"
+        },
+        {
+          "slug": "apple",
+          "src": "/temp/apple.png",
+          "url": "/"
+        }
+      ]
+    }
+  ],
+  "productSlider": [
+    {
+      "title": "Наушники<br>JBL JR310BT",
+      "image": "/temp/jbl-jr310bt.png",
+      "imageMobile": "/temp/jbl-jr310bt--m.png"
+    },
+    {
+      "title": "Наушники<br>JBL JR310BT",
+      "image": "/temp/jbl-jr310bt-l.png",
+      "imageMobile": "/temp/jbl-jr310bt-l--m.png"
+    },
+    {
+      "title": "Наушники<br>JBL JR310BT",
+      "image": "/temp/jbl-jr310bt.png",
+      "imageMobile": "/temp/jbl-jr310bt--m.png"
+    },
+    {
+      "title": "Наушники<br>JBL JR310BT",
+      "image": "/temp/jbl-jr310bt-l.png",
+      "imageMobile": "/temp/jbl-jr310bt-l--m.png"
+    },
+    {
+      "title": "Наушники<br>JBL JR310BT",
+      "image": "/temp/jbl-jr310bt.png",
+      "imageMobile": "/temp/jbl-jr310bt--m.png"
+    },
+    {
+      "title": "Наушники<br>JBL JR310BT",
+      "image": "/temp/jbl-jr310bt-l.png",
+      "imageMobile": "/temp/jbl-jr310bt-l--m.png"
+    }
+  ]
+}

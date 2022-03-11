@@ -1,0 +1,29 @@
+.text-accordion {
+  &__btn.g-accordion__btn {
+    @include Inter(16px,180%,normal,normal,$green);
+    margin-top: 0;
+    background: #fff;
+    display: inline;
+
+    svg {
+      margin-bottom: 2px;
+    }
+
+    &.floating {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 100%;
+        transform: translateX(-100%);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, #FFFFFF 100%);
+      }
+    }
+  }
+}

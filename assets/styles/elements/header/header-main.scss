@@ -1,0 +1,196 @@
+.header-main {
+  padding: 24px 0;
+  position: relative;
+  z-index: 10001;
+  background: #fff;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    position: relative;
+  }
+
+  &__logo {
+    min-width: 162px;
+    width: 162px;
+    height: auto;
+    display: block;
+
+    svg {
+      width: 100%;
+      height: auto;
+
+      path {
+        fill: $dark;
+      }
+    }
+  }
+
+  &__button  {
+    width: 111px;
+    background: $light-gray;
+    border-radius: 6px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    transition: background .2s ease;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    span {
+      display: inline-block;
+      margin-top: 3px;
+      @include Inter(11px, 13px, normal, 500,$dark);
+      text-align: center;
+      transition: color .2s ease;
+    }
+
+    svg path {
+      transition: stroke .2s ease;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background: $dark-gray;
+      }
+    }
+
+    &.nuxt-link-exact-active {
+      background: $dark-2;
+
+      span {
+        color: #fff;
+      }
+
+      svg path {
+        stroke: #fff;
+      }
+    }
+
+    &-count {
+      position: absolute;
+      top: 6px;
+      right: 20px;
+      background: $red;
+      border-radius: 50px;
+      padding: 0 5px 2px;
+      min-width: 18px;
+      min-height: 18px;
+      @include flex-center;
+      font-weight: 500;
+      font-size: 9px;
+      line-height: 11px;
+      text-align: center;
+
+      span {
+        color: #FFFFFF !important;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    margin: 0 10px 0 45px;
+    position: relative;
+    background-color: $light-gray;
+    height: 100%;
+    padding: 19px 17px 19px 20px;
+    @include Inter(14px, 17px, normal, 500,$dark);
+    border-radius: 6px;
+    z-index: 3;
+
+    &-dropdown {
+      position: absolute;
+      bottom: 8px;
+      left: 0;
+      right: 0;
+      transform-origin: bottom;
+      transition: transform .2s ease;
+      transform: scaleY(0) translateY(100%);
+      background: #fff;
+      z-index: 1;
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.03);
+      border-radius: 6px;
+
+      &--active {
+        transform: scaleY(1) translateY(100%);
+      }
+
+      &--loading {
+        min-height: 100px;
+      }
+
+      li {
+        cursor: pointer;
+
+        a {
+          display: block;
+          padding: 10px 20px;
+          width: 100%;
+          height: 100%;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          color: #000000;
+        }
+
+        &:last-child {
+          border-radius: 0 0 6px 6px;
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            background: #BFDEFF;
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.03);
+          }
+        }
+      }
+    }
+  }
+
+  .custom-input-h {
+    background-color: $light-gray;
+
+    button {
+      pointer-events: none;
+    }
+
+    &__input {
+      background-color: $light-gray;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      input {
+        background-color: $light-gray;
+        padding-right: 10px;
+      }
+    }
+
+    &--focus {
+      background: #fff;
+
+      .custom-input-h__input {
+        background: #fff;
+
+        input {
+          background: #fff;
+        }
+      }
+    }
+  }
+}

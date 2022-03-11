@@ -1,0 +1,260 @@
+.g-header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  transition: transform .2s ease;
+
+  &--hidden {
+    transform: translateY(-100%);
+  }
+
+  &__content {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 2;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    margin-left: -12px;
+    margin-right: -12px;
+    width: calc(100% + 24px);
+
+    &-item {
+      padding: 16px 12px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+
+      a {
+        color: $dark;
+        transition: color .2s ease;
+
+        @media (hover: hover) {
+          &:hover {
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+
+    &-item {
+      position: relative;
+
+      &:before {
+        content: '';
+        height: 20px;
+        width: 1px;
+        background: $gray-3;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:last-child {
+        &:after {
+          content: '';
+          height: 20px;
+          width: 1px;
+          background: $gray-3;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      @mixin activeHeaderFixedButton {
+        svg {
+          path {
+            stroke: $green;
+          }
+        }
+
+        span {
+          color: $green;
+        }
+      }
+
+      .button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 30px;
+        position: relative;
+
+        svg {
+          width: auto;
+          height: 14px;
+          margin-bottom: 3px;
+
+          path {
+            transition: stroke .2s ease;
+          }
+        }
+
+        span {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 12px;
+          text-align: center;
+          color: $dark;
+          transition: color .2s ease;
+        }
+
+        &.nuxt-link-exact-active, &.active {
+          @include activeHeaderFixedButton;
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            @include activeHeaderFixedButton;
+          }
+        }
+      }
+
+      .button-count {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        background: $red;
+        border-radius: 50px;
+        padding: 0 4px 2px;
+        min-width: 14px;
+        min-height: 14px;
+        @include flex-center;
+        font-weight: 500;
+        font-size: 9px;
+        line-height: 11px;
+        text-align: center;
+
+        span {
+          color: #FFFFFF !important;
+        }
+      }
+
+      .phone {
+        display: flex;
+        align-items: center;
+        padding: 0 40px;
+
+        svg {
+          margin-right: 9px;
+          min-width: 18px;
+          width: 18px;
+          height: 18px;
+
+          path {
+            transition: stroke .2s ease;
+          }
+        }
+
+        span {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          color: $dark;
+          white-space: nowrap;
+          transition: color .2s ease;
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            @include activeHeaderFixedButton;
+          }
+        }
+      }
+    }
+  }
+
+  &__search {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: transform .2s ease;
+
+    &--active {
+      transform: translateY(100%);
+    }
+
+    input {
+      width: 100%;
+      padding: 16px 30px;
+      text-align: center;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 24px;
+      color: $dark;
+      background: $gray-4;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+      z-index: 2;
+      position: relative;
+    }
+
+    &-dropdown {
+      background: $gray-4;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+      padding: 40px 20px 20px;
+      max-height: 250px;
+      overflow-y: auto;
+      transition: transform .2s ease, height .2s ease;
+      z-index: 1;
+      transform: translateY(-20px);
+
+      &--no-query {
+        transform: translateY(-100%);
+      }
+
+      &--loading {
+        height: 100px;
+
+        ul {
+          height: 100%;
+        }
+      }
+
+      ul {
+        position: relative;
+      }
+
+      a {
+        width: 100%;
+        display: block;
+        color: $dark;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+      }
+
+      li {
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

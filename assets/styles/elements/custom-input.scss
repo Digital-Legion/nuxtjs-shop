@@ -1,0 +1,93 @@
+.custom-input {
+  width: 100%;
+
+  input, textarea {
+    &::placeholder {
+      color: $gray-10 !important;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 20px 15px;
+    border: none;
+    color: #1a2552;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    border-radius: 0;
+    resize: none;
+    background: 0 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1px solid #E7E7E7;
+      border-radius: 6px;
+    }
+  }
+
+  &__character-count {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+    line-height: 22px;
+    color: #1a2552;
+
+    .max {
+      opacity: .75;
+    }
+  }
+
+  .phone-mask-wrapper-lib {
+    width: 100%;
+    height: unset;
+    padding-right: 20px;
+
+    input {
+      width: 100%;
+      margin-right: 20px;
+      padding: 20px 15px;
+      border: none;
+      color: #1a2552;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 22px;
+      border-radius: 0;
+      resize: none;
+      background: 0 0;
+      height: unset;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &.error {
+    .custom-input {
+      &__input {
+        &-wrapper {
+          border-color: $red;
+        }
+      }
+    }
+  }
+
+  &--compact {
+    .custom-input {
+      &__input {
+        padding: 12px;
+        font-size: 11px;
+        line-height: 13px;
+      }
+    }
+  }
+}

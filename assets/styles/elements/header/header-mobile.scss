@@ -1,0 +1,261 @@
+.g-header-mobile {
+  .lang-select {
+    margin-left: 10px;
+  }
+
+  &__logo {
+    width: 160px;
+    height: auto;
+    display: block;
+
+    svg {
+      width: 100%;
+      height: auto;
+
+      path {
+        fill: $dark;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 0 10px;
+    margin-right: 4px;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--like {
+      svg {
+        min-width: 22px;
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    &--cart {
+      svg {
+        min-width: 20px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    @include svg-path-stroke-hover;
+
+    &.nuxt-link-exact-active {
+      pointer-events: none;
+
+      svg path {
+        stroke: $gray-7;
+      }
+    }
+
+    &-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: $red;
+      border-radius: 50px;
+      padding: 2px 4px 2px;
+      min-width: 15px;
+      min-height: 15px;
+      @include flex-center;
+      font-weight: 500;
+      font-size: 9px;
+      line-height: 11px;
+      text-align: center;
+
+      span {
+        color: #FFFFFF !important;
+      }
+    }
+  }
+
+  &__search {
+    width: 100%;
+    margin: 0 10px 0 20px;
+    position: relative;
+    background-color: $light-gray;
+    height: 100%;
+    padding: 10px 20px 10px;
+    @include Inter(14px, 17px, normal, 500,$dark);
+    border-radius: 6px;
+
+    &.custom-input-h {
+      .custom-input-h__input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        input {
+          padding-right: 10px;
+        }
+      }
+    }
+
+    &--bottom {
+      display: none !important;
+    }
+
+    button {
+      pointer-events: none;
+    }
+
+    &-dropdown {
+      position: absolute;
+      bottom: 8px;
+      left: 0;
+      right: 0;
+      transform-origin: bottom;
+      transition: transform .2s ease;
+      transform: scaleY(0) translateY(100%);
+      background: #fff;
+      z-index: 10000;
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.03);
+      border-radius: 6px;
+
+      &--active {
+        transform: scaleY(1) translateY(100%);
+      }
+
+      &--loading {
+        min-height: 100px;
+      }
+
+      li {
+        cursor: pointer;
+
+        &:last-child {
+          border-radius: 0 0 6px 6px;
+        }
+
+        a {
+          display: block;
+          width: 100%;
+          padding: 10px 20px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          color: #000000;
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            background: #BFDEFF;
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.03);
+          }
+        }
+      }
+    }
+  }
+
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10001;
+    transition: box-shadow .2s ease;
+
+    &--shadow {
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    &__left, &__right {
+      display: flex;
+      align-items: center;
+    }
+
+    &__left {
+      .burger-menu-toggle {
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 601px) {
+  .g-header-mobile {
+    .burger-menu-toggle {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .g-header-mobile {
+    padding-bottom: 20px;
+
+    &-main {
+      &--fixed {
+        padding-bottom: 82px;
+      }
+    }
+
+    &__search {
+      margin: 0;
+
+      &--top {
+        display: none !important;
+      }
+
+      &--bottom {
+        display: block !important;
+        position: absolute;
+        top: 70px;
+        left: 30px;
+        right: 30px;
+        width: unset;
+        height: unset;
+      }
+
+      &--fixed {
+        position: fixed;
+        z-index: 10002;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .g-header-mobile {
+    &__logo {
+      width: 111px;
+      height: auto;
+    }
+
+    &__search {
+      padding: 10px;
+      border: none;
+      left: 15px;
+      right: 15px;
+
+      input {
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      svg {
+        min-width: 18px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &-main {
+      padding: 20px 15px;
+
+      &--fixed {
+        padding-bottom: 82px;
+      }
+    }
+  }
+}

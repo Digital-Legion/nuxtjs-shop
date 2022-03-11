@@ -1,0 +1,25 @@
+.color-select {
+  .g-colors {
+    margin: -5px -10px;
+
+    &-item {
+      margin-top: 5px;
+      margin-bottom: 5px;
+
+      &--active {
+        &:after {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .color-select {
+    .g-colors {
+      flex-wrap: nowrap;
+    }
+  }
+}

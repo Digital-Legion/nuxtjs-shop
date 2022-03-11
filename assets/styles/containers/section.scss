@@ -1,0 +1,16 @@
+.g-section {
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  &--dark {
+    background: $gray-2;
+
+    .global-slider {
+      &__top {
+        .global-slider__navigation {
+          background: #fff;
+        }
+      }
+    }
+  }
+}

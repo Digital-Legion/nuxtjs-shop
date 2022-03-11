@@ -1,0 +1,43 @@
+@media (max-width: 600px) {
+  .product-videos {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+
+    .container {
+      padding: 0;
+    }
+
+    .global-slider {
+      &__top {
+        margin-bottom: 15px;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        h2 {
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+
+      &__navigation-wrapper {
+        display: none;
+      }
+
+      .swiper-container {
+        overflow: visible;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+
+    .video-card {
+      max-width: 248px;
+
+      &__title {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+  }
+}

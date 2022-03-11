@@ -1,0 +1,19 @@
+.btn {
+  border-radius: 6px;
+  max-width: 171px;
+  width: 100%;
+  height: 57px;
+  display: flex;
+  background-color: $main-color;
+  justify-content: center;
+  align-items: center;
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+  span {
+    margin-left: 21px;
+    @include Inter(16px,19px,normal,bold,$dark);
+    display: inline-block;
+  }
+}

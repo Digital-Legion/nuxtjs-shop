@@ -1,0 +1,90 @@
+.g-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__box {
+    min-width: 16px;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    border-radius: 3px;
+    border: 1px solid $gray-12;
+    background: #fff;
+    position: relative;
+    transition: background .2s ease, box-shadow .2s ease, border-color .2s ease;
+
+    &--active {
+      box-shadow: 0 0 0 2px rgba(103, 204, 140, 0.25);
+      background: $green;
+      border-color: $green;
+    }
+  }
+
+  &__label {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 126%;
+    color: $dark;
+
+    a {
+      color: $gray-11;
+    }
+  }
+
+  &--check {
+    .g-checkbox {
+      &__box {
+        &:after, &:before {
+          content: '';
+          position: absolute;
+          background: #fff;
+          border-radius: 10px;
+          height: 2px;
+        }
+
+        &:after {
+          bottom: 5.5px;
+          left: 2px;
+          width: 5px;
+          transform: rotate(45deg);
+        }
+
+        &:before {
+          bottom: 6px;
+          right: 1.5px;
+          width: 8.5px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &--radio {
+    .g-checkbox {
+      &__box {
+        border-radius: 50%;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 8px;
+          height: 8px;
+          background: #fff;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &--error {
+    .g-checkbox {
+      &__box {
+        border-color: $red;
+      }
+    }
+  }
+}

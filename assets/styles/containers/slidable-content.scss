@@ -1,0 +1,8 @@
+.slidable-content {
+  overflow: visible;
+  width: 100%;
+
+  .swiper-slide {
+    width: fit-content;
+  }
+}

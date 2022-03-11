@@ -1,0 +1,67 @@
+.contact-select {
+  @mixin contact-item {
+    a {
+      display: flex;
+      align-items: center;
+
+      svg {
+        min-width: 18px;
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+      }
+
+      @media (hover: hover) {
+        span {
+          transition: color .2s ease;
+        }
+
+        svg {
+          path {
+            transition: stroke .2s ease;
+          }
+        }
+
+        &:hover {
+          span {
+            color: $green;
+          }
+
+          svg {
+            path {
+              stroke: $green;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .g-select {
+    &__top {
+      @include contact-item;
+    }
+
+    &__dropdown {
+      left: unset;
+      top: -11px;
+      right: -27px;
+      padding: 36px 27px 16px;
+      transform: scale(0);
+      width: calc(100% + 27px * 2);
+
+      &.active {
+        transform: scale(1);
+      }
+
+      li {
+        @include contact-item;
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

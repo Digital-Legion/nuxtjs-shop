@@ -1,0 +1,15 @@
+.g-header {
+  height: 282px;
+}
+
+@media (max-width: 1220px) {
+  .g-header {
+    height: unset;
+  }
+}
+
+@media (max-width: 600px) {
+  .g-header {
+    height: 127px;
+  }
+}

@@ -1,0 +1,17 @@
+.title-reset {
+  display: flex;
+
+  &__btn {
+    margin-left: 14px;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 10px;
+    color: $green;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-left: 3px;
+    }
+  }
+}

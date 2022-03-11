@@ -1,0 +1,161 @@
+.credit-calculator {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: $gray-2;
+  border: 1px solid $gray-14;
+  padding: 10px 10px 10px 20px;
+  border-radius: 8px;
+
+  &__slider {
+    width: 100%;
+    margin-right: 20px;
+
+    .months {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none;
+
+      &-item {
+        font-weight: 500;
+        font-size: 9px;
+        line-height: 11px;
+        color: $dark;
+      }
+    }
+
+    .slider {
+      width: 100%;
+      height: 2px;
+      background: $gray-12;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      position: relative;
+
+      .value {
+        padding: 2px 4px;
+        border-radius: 4px;
+        background: $green;
+        font-weight: 500;
+        font-size: 9px;
+        line-height: 11px;
+        text-align: center;
+        color: #fff;
+        position: absolute;
+        top: -25px;
+        left: 0;
+        pointer-events: none;
+      }
+
+      .thumb {
+        position: absolute;
+        top: -5px;
+        left: 0;
+        z-index: 2;
+        cursor: grab;
+        background: #FFFFFF;
+        border: 1px solid $green;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      .bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: $green;
+        border-radius: 63px;
+        z-index: 1;
+        transform-origin: left;
+      }
+    }
+  }
+
+  &__inputs-action {
+    min-width: 226px;
+
+    .inputs {
+      display: flex;
+      margin-bottom: 6px;
+
+      .common__label {
+        font-weight: 600;
+        font-size: 9px;
+        line-height: 11px;
+      }
+
+      .custom-input {
+        margin-right: 6px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &__input {
+          padding: 8px 10px;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    border-radius: 6px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $green;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    color: #fff;
+
+    svg {
+      margin-right: 8px;
+      height: 14px;
+      width: auto;
+
+      path {
+        stroke: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .credit-calculator {
+    flex-direction: column;
+    padding: 40px 20px 20px;
+    width: 340px;
+
+    &__slider {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .credit-calculator {
+    width: 100%;
+
+    &__inputs-action {
+      width: 100%;
+    }
+  }
+}

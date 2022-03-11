@@ -1,0 +1,76 @@
+@mixin Inter($font-size, $line-height, $letter-spacing, $font-weight, $color) {
+  font-family: 'Inter', sans-serif;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  color: $color;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin svg-path-stroke-hover {
+  @media (hover: hover) {
+    svg {
+      path {
+        transition: stroke .2s ease;
+      }
+    }
+
+    &:hover {
+      svg {
+        path {
+          stroke: $green;
+        }
+      }
+    }
+  }
+}
+
+@keyframes placeHolderShimmer{
+  0%{
+    background-position: -468px 0
+  }
+  100%{
+    background-position: 468px 0
+  }
+}
+
+@mixin animated-background {
+  animation-duration: 1.25s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: #F6F6F6;
+  background: linear-gradient(to right, #F6F6F6 8%, #F0F0F0 18%, #F6F6F6 33%);
+  background-size: 800px 104px;
+}
+
+@mixin custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: $green $gray-12;
+
+  &::-webkit-scrollbar {
+    background: $gray-12;
+    width: 3px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-overflow-scrolling: auto;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $green;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+}

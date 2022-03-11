@@ -1,0 +1,24 @@
+.lang-select {
+  text-transform: uppercase;
+
+  @mixin lang-icon {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+  }
+
+  &__top-icon {
+    @include lang-icon;
+  }
+
+  .g-select {
+    &__dropdown {
+      li {
+        svg {
+          @include lang-icon;
+        }
+      }
+    }
+  }
+}

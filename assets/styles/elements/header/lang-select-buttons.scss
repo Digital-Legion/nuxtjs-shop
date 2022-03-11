@@ -1,0 +1,25 @@
+.lang-select-buttons {
+  display: flex;
+
+  &__item {
+    padding: 4px 13px;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    background: $gray-1;
+    transition: background .2s ease;
+    text-transform: uppercase;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      background: $green;
+    }
+  }
+}

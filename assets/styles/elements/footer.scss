@@ -1,0 +1,265 @@
+.footer {
+  background: $footer-color;
+
+  &__subscription-success {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: $green;
+
+    svg {
+      width: 27px;
+      height: 27px;
+      margin-right: 12px;
+    }
+  }
+
+  &__inner {
+    padding: 40px 0 32px;
+  }
+
+  &__icon {
+    margin-bottom: 41px;
+    width: 162px;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__row {
+    display: flex;
+    border-bottom: 1px solid #909090;
+    padding-bottom: 102px;
+  }
+
+  &__subtitle {
+    @include Inter(18px,22px,normal,500,$main-color);
+    margin-bottom: 28px;
+
+    &--last {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__nav {
+    @include Inter(14px,17px,normal,normal,$main-color);
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+
+    &--discount {
+      width: 100%;
+      max-width: 361px;
+    }
+
+    &:first-child {
+      margin-right: 99px;
+    }
+
+    &:nth-child(2) {
+      margin-right: 75px;
+    }
+
+    &:nth-child(3) {
+      margin-right: 49px;
+      max-width: 244px;
+      width: 100%;
+    }
+  }
+
+  &__contact {
+    margin-bottom: 31px;
+    display: flex;
+    @include Inter(14px,17px,normal,normal,$main-color);
+    span {
+      display: inline-block;
+      margin-left: 21.5px;
+      max-width: 206px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    @include Inter(12px,15px,normal,normal,$main-color);
+    max-width: 280px;
+    margin-bottom: 27px;
+  }
+
+  &__email {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    max-width: 284px;
+    margin-right: 9px;
+
+    .custom-input {
+      &__input {
+        color: $main-color;
+        padding: 15px 19px;
+        height: 43px;
+        font-size: 12px;
+        line-height: 15px;
+
+        &-wrapper {
+          border: 1px solid $gray;
+          background-color: $footer-color;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  &__button {
+    background: $gray;
+    border-radius: 5px;
+    width: 68px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    color: $footer-color;
+    transition: opacity .2s ease;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__socials {
+    display: flex;
+  }
+
+  &__svg {
+    margin-right: 36px;
+  }
+
+  &__copyright {
+    @include Inter(14px,17px,normal,normal,$main-color);
+    margin-top: 27px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .footer {
+    &__row {
+      flex-wrap: wrap;
+    }
+
+    &__column {
+      width: 50%;
+
+      &:first-child {
+        margin-right: 0;
+        margin-bottom: 50px;
+      }
+
+      &:nth-child(2) {
+        margin-right: 0;
+        margin-bottom: 50px;
+      }
+
+      &:nth-child(3) {
+        width: 50%;
+        margin-right: 0;
+        max-width: unset;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    &__icon {
+      width: 138px;
+      margin-bottom: 30px;
+    }
+
+    &__inner {
+      padding: 32px 0;
+    }
+
+    &__row {
+      padding-bottom: 50px;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 26px;
+    }
+
+    &__nav {
+      max-width: 150px;
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    &__column {
+      width: 100%;
+
+      &--discount {
+        .footer {
+          &__subtitle {
+            margin-bottom: 16px;
+          }
+        }
+      }
+
+      &:nth-child(1) {
+        width: 40%;
+        margin-bottom: 0;
+      }
+
+      &:nth-child(2) {
+        width: auto;
+        margin-bottom: 0;
+      }
+
+      &:nth-child(3) {
+        width: 100%;
+        padding-top: 35px;
+        padding-bottom: 48px;
+        margin-bottom: 35px;
+        margin-top: 40px;
+        position: relative;
+
+        &:before, &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: $gray;
+        }
+
+        &:before {
+          top: 0;
+        }
+
+        &:after {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

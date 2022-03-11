@@ -1,0 +1,50 @@
+.g-fancybox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20000;
+  background: #fff;
+  transition: opacity .2s ease;
+
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__close {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    width: 24px;
+    height: 24px;
+    z-index: 10;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__pagination {
+    bottom: 30px !important;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    @include flex-center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-width: calc(100vw - 30px);
+      max-height: 80vh;
+      object-fit: contain;
+    }
+  }
+}

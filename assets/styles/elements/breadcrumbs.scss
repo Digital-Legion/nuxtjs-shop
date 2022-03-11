@@ -1,0 +1,29 @@
+.g-breadcrumbs {
+  display: flex;
+
+  &__item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #CBCBCB;
+    white-space: nowrap;
+
+    &--active {
+      color: $dark;
+    }
+
+    &--separator {
+      margin: 0 10px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .g-breadcrumbs {
+    &__item {
+      font-size: 11px;
+      line-height: 13px;
+    }
+  }
+}
