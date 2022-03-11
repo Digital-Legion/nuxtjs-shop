@@ -1,4 +1,4 @@
-# proximart
+# Nuxt JS Example Project
 
 ## Build Setup
 
